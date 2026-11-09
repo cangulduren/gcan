@@ -1,8 +1,8 @@
 ---
 layout: book-review
-title: The Godfather
-author: Mario Puzo
-cover: assets/img/book_covers/the_godfather.jpg
+title: Thinking Like An Engineer
+author: Michael Davis
+cover: assets/img/book_covers/Thinking-Like-an-Engineer.jpg
 olid: OL43499941M # use Open Library ID to fetch cover (if no `cover` is provided)
 isbn: 7539967447 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
 categories: classics crime historical-fiction mystery novels thriller
@@ -17,12 +17,77 @@ goodreads_review: 6318556633
 status: Finished
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sollicitudin eros sit amet ante aliquet, sit amet vulputate lectus mattis. Aenean ullamcorper pretium nunc, sed egestas lorem elementum id. Nulla id mi id neque ultrices egestas ut in urna. Sed ac ultricies nunc. Nam convallis placerat urna id egestas. Nulla porta, est interdum vestibulum venenatis, lorem odio laoreet sapien, in pulvinar tellus eros a dolor. Vivamus sapien justo, ullamcorper a mi eget, scelerisque euismod nunc. In augue augue, ultrices a ornare non, tincidunt quis justo. Donec sit amet consectetur eros. Nullam neque leo, tincidunt id ipsum ac, volutpat lobortis mi. Phasellus consequat ultricies arcu, eu semper ligula ultrices eget. Ut in fringilla elit, ac tincidunt nisi.
-
-Nunc commodo elit nec turpis feugiat consectetur. Nullam in nisi egestas, fermentum ligula hendrerit, euismod enim. Nulla eu hendrerit eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et velit ante. Vestibulum pretium vitae quam et sagittis. Proin eu nunc vel velit accumsan eleifend. Nulla facilisis, diam tempus imperdiet ultrices, massa ipsum consequat orci, sed efficitur eros mi a felis. Cras lobortis turpis sem, sed lobortis nunc ullamcorper tristique. Nam vehicula rhoncus ante, in faucibus sapien scelerisque et. Donec semper libero et tincidunt mattis. In vestibulum, nulla pretium dictum commodo, risus nulla vestibulum felis, at tincidunt massa mi in odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-Donec efficitur ultrices purus sit amet imperdiet. Nam consequat metus in erat sodales faucibus. Aliquam maximus fermentum nulla id finibus. Aliquam iaculis sed odio vel rutrum. Curabitur sed odio est. Praesent nec sollicitudin tortor. Praesent pharetra, turpis quis porttitor rhoncus, ante massa fringilla lacus, nec porttitor magna turpis vitae felis. Nullam tristique massa id odio imperdiet, nec sodales massa egestas. Proin nisi metus, euismod sed accumsan vitae, facilisis vel risus. Morbi suscipit auctor erat, nec viverra elit fringilla eu. Mauris congue, purus id tristique facilisis, felis nisi efficitur magna, eu consectetur augue sem vitae lacus. Aliquam erat volutpat. Cras at nibh ultricies, volutpat arcu vitae, dictum est. In ac dolor sagittis, egestas lectus et, semper nisl. Etiam consectetur purus vitae sapien porttitor auctor.
-
-Nulla sit amet venenatis odio. Suspendisse ac lacus quis augue mollis tempus vel in lorem. Donec augue turpis, eleifend nec nibh eu, elementum dictum metus. Proin ut est ligula. Etiam vehicula facilisis metus, sit amet consectetur risus ullamcorper porttitor. In congue nibh quis sollicitudin iaculis. Donec a mollis lorem, non mollis lacus. Nulla et leo ex. Aliquam erat volutpat. Nam sit amet tincidunt mauris. Vivamus vitae est sit amet nisi semper egestas. Donec in diam pharetra, commodo diam vitae, imperdiet ligula. Cras iaculis ac diam eget vehicula. Proin suscipit ante enim, quis vehicula mi porta bibendum. Aliquam a diam porttitor, sollicitudin justo vitae, tempor odio.
-
-Cras fermentum dignissim pretium. Donec quis turpis eu neque lacinia facilisis in sit amet nibh. Nulla non tortor ultricies, euismod est in, blandit nibh. Ut a neque metus. Sed convallis condimentum nibh quis finibus. Praesent aliquam sem iaculis eros maximus accumsan. Nulla venenatis mauris id aliquet maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at enim vitae ex porttitor vestibulum sed eget nibh. Suspendisse accumsan feugiat quam eget ultricies.
+Prolog: "Görünmez Köprüler" (Invisible Bridges)
+Kaynak: G. Madhavan, Applied Minds: How Engineers Think. Özgün anlatımlı ders notudur; çeviri değildir.
+🎯 Çıktılar
+Mühendisliğin "her yerde ama görünmez" (omnipresent but invisible) olmasını açıklayabilmek
+Barkodun iki ayrı buluşun birleşiminden doğduğunu anlatabilmek
+Kısıt (constraint) ve çözüm uzayı (solution space) kavramlarını tanımlayabilmek
+Bir çözümün beklenmedik alanlara taşınmasını örneklerle tartışabilmek
+🗺️ Akış
+Aşama	İçerik	Ana fikir
+1	Rosie Ruiz vakası (1980)	Büyük ölçekte denetim zordur
+2	David Collins ve KarTrak (1959)	Uzaktan otomatik tanımlama
+3	George Laurer ve UPC (1970'ler)	Katı kısıtlar altında tasarım
+4	Barkodun doğuşu ve ana tez	Mühendislik görünmezdir ama belirleyicidir
+5	Maratona dönüş: RFID	Çözümler uyarlanarak yeni alanlara taşınır
+1. Sorun: Maratonda Hile
+1980 Boston Maratonu'nda Rosie Ruiz kadınlar kategorisinde birinci olarak bitirdi. Yorgun görünmüyordu, antrenman bilgisi yoktu; kontrol noktalarında ve görüntülerde hiç fark edilmemişti. İnceleme, yarışın büyük kısmını koşmadığını gösterdi ve diskalifiye edildi. Yazar olayı bir mühendislik problemi olarak kurar: Binlerce katılımcılı bir yarışta hile otomatik ve güvenilir biçimde nasıl tespit edilir? Temelde bu bir doğrulama (verification) sorunudur.
+💡 Güncel örnekler: Çevrim içi sınav gözetimi, spor uygulamalarında GPS kaydı, oyunlarda hile tespit sistemleri.
+2. Birinci Buluş: Vagonları Uzaktan Okumak
+1959'da ABD demiryollarında yaklaşık 1,6 milyon yük vagonu vardı ve her birinin günlük konumu bilinemiyordu. Sylvania'dan David Collins projeye boş zamanlarında çalıştı. Zorluklar şunlardı: kodlar farklı renk, boyut ve yerde yazılıydı; trenler farklı hızlarla gidiyordu; kar, sis ve kir okumayı bozuyordu; laboratuvar yetmiyor, saha testi gerekiyordu.
+Çözümün unsurları:
+Işık huzmesiyle okuyan optik tarayıcı (optical scanner)
+Tasarım parametreleri: kod noktası boyutu (code spot size), tarama hızı (scan rate), alan derinliği (depth of field)
+Bir meslektaşın önerisiyle kodun yan çevrilmesi (yatay çubuk yerine dikey düzen)
+Sabit ışık yerine dönen aynalar; sonraki yıllarda lazer
+Sistemin adı KarTrak; 1967'ye gelince demiryollarında yayıldı
+💡 Güncel örnekler: HGS/OGS geçiş sistemleri, kargo takibi, plaka tanıma sistemleri.
+3. İkinci Buluş: Market Rafındaki Kod
+1970'lerde market sektörü envanter yönetiminde zorlanıyordu. IBM'den George Laurer, yöneticisinin önerdiği "hedef tahtası" kodunun yetersiz olduğunu görüp riski göze alarak yeni bir tasarım geliştirdi.
+Tasarım kısıtları:
+Kısıt	Anlamı
+Küçük boyut	Yaklaşık bir buçuk inç kare
+Her yönden okunabilirlik	Omnidirectionality
+Yüksek doğruluk	Yaklaşık %99,995
+Farklı ambalajlara uyum	Sabun, kutu, kahve ambalajı
+Maliyeti artırmama	Üretim maliyeti sabit kalmalı
+Siyah-beyaz çubuk düzeni ışığı soğurup yansıtarak sensörde elektrik sinyaline dönüştü. Prototip testlerinde beklentilerin çok üzerinde doğruluk elde edildi. Kod Evrensel Ürün Kodu (Universal Product Code, UPC) adıyla 1973'te standart oldu.
+"Altın tavuk" sorunu: Etin fiyatında olası bir hata çok yüksek tutarla sonuçlanabilirdi. Laurer'in gözlemi: İnsanlar küçük insan hatasını bağışlar, makine hatasını bağışlamaz. Çözüm, koda bir kontrol hanesi (check digit) eklemekti.
+💡 Güncel örnekler: IBAN ve kart numaralarındaki doğrulama hanesi, yapay zekâ hatalarına düşük tolerans, otonom araç kazalarının haber değeri.
+4. Birleşme ve Ana Tez
+Collins'in okuma teknolojisi ile Laurer'in kod standardı birleşerek barkodu oluşturdu ve modern tedarik zincirinin (supply chain) temelini attı.
+Yazarın tezleri:
+Mühendisler problemleri fırsata dönüştürür; disiplinli, açık fikirli ve gerçekçidir.
+Hatalardan öğrenme süreci, ilk fikir kadar önemlidir.
+Mühendisler insanlara yeni seçenekler sunan bir çözüm uzayı yaratır.
+Paradoks: Mühendislik her yerdedir ama yalnızca bir şey ters gidince (uçak kazası, köprü çökmesi) konuşulur. Gökdelenin başarısı, taşıyıcı sisteminin fark edilmemesidir.
+Mühendislik zihniyeti üzerine iki görüş:
+Craig Barrett (eski Intel CEO'su): Ayırt edici olan, titiz ve sistematik problem çözmedir.
+Jim Plummer (eski Stanford dekanı): Mühendisler entegratördür; uygulanabilirlik (feasibility), sürdürülebilirlik (viability) ve istenirlik (desirability) kesişiminde çalışır.
+💡 Güncel örnekler: 6 Şubat 2023 depremlerinde yapı mühendisliğinin ancak felaket anında görünür olması, Temmuz 2024 CrowdStrike kesintisinde altyapı yazılımının çökünce fark edilmesi.
+5. Maratona Dönüş: Uyarlama
+Boston olayından sonra New York Road Runners, Collins'e barkodla koşucu takibini sordu. Collins başta fikri reddetti; denemeler, vagonda çalışanın insanda (ter, hareket, sallanan numara) doğrudan çalışmadığını gösterdi. Uyarlama: Koşucular bitiş çizgisinde sıraya girip okutuldu. Hileyi doğrudan çözmek ise yıllar sonra başka bir mühendis ve RFID (radio-frequency identification) ile mümkün oldu. Bugün giysi veya ayakkabıdaki çipler saniyenin kesirleriyle izleme sağlar. Collins bunu öngörmediği bir uç uygulama (outlier application) olarak niteler.
+💡 Güncel örnekler: AirTag benzeri takip etiketleri, mağazalarda RFID stok sayımı, hastane hasta bileklikleri, QR kodlu ödeme.
+📚 Sözlük
+Türkçe	English	Kısa açıklama
+Çözüm uzayı	Solution space	Mümkün çözümler kümesi
+Kısıt	Constraint	Tasarımı sınırlayan koşul
+Şartname	Specification	Ölçülebilir gereksinim
+Kontrol hanesi	Check digit	Hata yakalayan doğrulama hanesi
+Her yönden okunabilirlik	Omnidirectionality	Açıdan bağımsız okuma
+Tedarik zinciri	Supply chain	Üretimden tüketiciye akış
+Uygulanabilirlik / Sürdürülebilirlik / İstenirlik	Feasibility / Viability / Desirability	Mühendislik kesişim üçlüsü
+RFID	Radio-frequency identification	Radyo dalgasıyla kimlik okuma
+Uç uygulama	Outlier application	Öngörülmemiş kullanım
+💬 Tartışma
+Bir teknolojinin tasarlandığı amacın dışında kullanılması ne zaman yararlı, ne zaman riskli olur?
+Laurer'in yöneticisinin talimatına karşı çıkması etik açıdan nasıl değerlendirilir?
+"Makine hatası bağışlanmaz" gözlemi yapay zekâ tasarımını nasıl etkilemelidir?
+Mühendislik neden yalnızca bozulunca görünür olur? Kendi çevrenizden örnek veriniz.
+Bir ürünün uygulanabilir, sürdürülebilir ve istenir olması ne demektir?
+✅ Kontrol Listesi
+[ ] Rosie Ruiz vakasının mühendislik sorusunu anlatabiliyorum
+[ ] KarTrak ve UPC'nin farklı kökenlerini ayırt edebiliyorum
+[ ] Laurer'in en az üç tasarım kısıtını sayabiliyorum
+[ ] "Her yerde ama görünmez" paradoksunu güncel örnekle açıklayabiliyorum
