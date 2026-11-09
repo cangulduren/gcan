@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>[Affiliations](https://www.ostimteknik.edu.tr/en)</a>. 
 
 profile:
   align: right
